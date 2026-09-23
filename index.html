@@ -1,124 +1,914 @@
 <!DOCTYPE html>
-<html lang="km">
+<html lang="km" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ពិធីសំពះផ្ទឹមសែន និងសូត្រមន្តអាពាហ៍ពិពាហ៍ - Wedding Nuptial Ceremony</title>
-    <link href="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>ពិធីសំពះផ្ទឹមសែន និងសូត្រមន្តអាពាហ៍ពិពាហ៍ | Nuptial Blessing Ceremony - ហួកាំង ថារ៉ា & ខេន លីដា</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Hanuman:wght@400;700&family=Moul&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Inline Stylesheet for Complete Single-File Self-Containment -->
+    <style>
+        :root {
+            --primary-color: #8b0000; /* Deep Royal Burgundy / Crimson */
+            --secondary-color: #d4af37; /* Warm Gold Metallic */
+            --accent-color: #f7e7ce; /* Cream / Champagne background */
+            --text-dark: #2c2c2c; /* Soft Charcoal Body Text */
+            --text-light: #ffffff; /* White Text */
+            --text-muted: #666666; /* Muted Subtitles & Descriptions */
+            --bg-gradient: linear-gradient(135deg, #fdfbf7 0%, #f4eae1 100%);
+            --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+            --shadow-gold: 0 4px 15px rgba(212, 175, 55, 0.3);
+            --border-gold: 2px solid #d4af37;
+            --transition-fast: all 0.3s ease;
+            
+            --font-khmer-moul: "Moul", serif;
+            --font-khmer-body: "Hanuman", "Segoe UI", Roboto, sans-serif;
+            --font-khmer-hand: "Freehand", cursive;
+            --font-en-serif: "Playfair Display", Georgia, serif;
+            --font-en-sans: "Poppins", sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-khmer-body);
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            line-height: 1.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        .invitation-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 680px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border: var(--border-gold);
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .khmer-sticker-header img,
+        .khmer-sticker-footer img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            font-family: var(--font-khmer-hand);
+            color: var(--secondary-color);
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo-english {
+            font-family: var(--font-en-serif);
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: -4px;
+            margin-bottom: 8px;
+        }
+
+        .title-moul {
+            font-family: var(--font-khmer-moul);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-top: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .title-english {
+            font-family: var(--font-en-serif);
+            color: var(--primary-color);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .parents-section-title {
+            font-family: var(--font-khmer-moul);
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--secondary-color);
+            text-underline-offset: 6px;
+        }
+
+        .parents-title-en {
+            font-family: var(--font-en-sans);
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 4px;
+        }
+
+        .parents-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .parent-side {
+            flex: 1;
+            background-color: var(--accent-color);
+            padding: 18px 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .side-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 1.05rem;
+        }
+
+        .side-title-en {
+            display: block;
+            font-family: var(--font-en-sans);
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .parent-names {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .highlight-name {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+            font-family: var(--font-en-sans);
+            font-size: 0.85rem;
+        }
+
+        .ceremony-text-wrapper {
+            margin: 25px 0;
+            padding: 0 10px;
+        }
+
+        .ceremony-text {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .text-divider {
+            height: 1px;
+            width: 80px;
+            background-color: var(--secondary-color);
+            margin: 14px auto;
+            opacity: 0.7;
+        }
+
+        .ceremony-text-en {
+            font-family: var(--font-en-serif);
+            font-size: 0.92rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .honorific-highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .couple-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                var(--accent-color) 50%,
+                transparent 100%
+            );
+            padding: 22px 10px;
+        }
+
+        .couple-side {
+            flex: 1;
+        }
+
+        .couple-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-family: var(--font-khmer-body);
+        }
+
+        .couple-label-en {
+            font-family: var(--font-en-sans);
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .couple-name {
+            font-family: var(--font-khmer-moul);
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .couple-name-en {
+            font-family: var(--font-en-serif);
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .and-connector {
+            font-family: var(--font-khmer-hand);
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .datetime-section, .location-section {
+            background: #fffdf9;
+            border: 1px dashed var(--secondary-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .datetime-title, .location-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+        }
+
+        .datetime-title-en {
+            font-family: var(--font-en-sans);
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .datetime-date {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .datetime-date-en {
+            font-family: var(--font-en-sans);
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .lunar-date, .location-sub {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .location-name {
+            font-size: 1.15rem;
+            font-weight: bold;
+            display: block;
+            color: var(--primary-color);
+            margin-top: 4px;
+        }
+
+        .location-name-en {
+            font-family: var(--font-en-serif);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .program-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .btn-program-toggle {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            padding: 14px 24px;
+            font-size: 0.95rem;
+            font-family: var(--font-khmer-body);
+            border-radius: 30px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-fast);
+            width: 100%;
+        }
+
+        .btn-program-toggle:hover {
+            background-color: #6a0000;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .timeline-container {
+            margin-top: 15px;
+            background: #fdfdfd;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            padding: 20px;
+            transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
+            overflow: hidden;
+        }
+
+        .timeline-container.collapsed {
+            display: none;
+            opacity: 0;
+        }
+
+        .timeline-container.expanded {
+            display: block;
+            opacity: 1;
+        }
+
+        .timeline-main-title {
+            font-family: var(--font-khmer-moul);
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .timeline-main-title-en {
+            display: block;
+            font-family: var(--font-en-serif);
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            gap: 15px;
+            padding: 14px 0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .time-badge {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            white-space: nowrap;
+            font-family: var(--font-en-sans);
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content strong {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .timeline-content em {
+            display: block;
+            font-family: var(--font-en-serif);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-style: normal;
+        }
+
+        .blessing-section {
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+
+        .blessing {
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .blessing-en {
+            font-family: var(--font-en-serif);
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary, .btn-secondary, .btn-ai-read {
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.88rem;
+            font-family: var(--font-khmer-body);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-fast);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+        }
+
+        .btn-ai-read {
+            background-color: #4a4a4a;
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover, .btn-secondary:hover, .btn-ai-read:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-ai-read.playing {
+            background-color: #e74c3c;
+            animation: pulseRed 1s infinite alternate;
+        }
+
+        @keyframes pulseRed {
+            0% { box-shadow: 0 0 0 rgba(231, 76, 60, 0.4); }
+            100% { box-shadow: 0 0 12px rgba(231, 76, 60, 0.8); }
+        }
+
+        footer {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        footer strong {
+            color: var(--primary-color);
+        }
+
+        /* Modal Dialog Styling */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 450px;
+            width: 100%;
+            border: var(--border-gold);
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .modal-card h3 {
+            color: var(--primary-color);
+            font-family: var(--font-khmer-moul);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-card p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .modal-close-btn {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: var(--font-khmer-body);
+        }
+
+        /* Floating Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: 1px solid var(--secondary-color);
+            border-radius: 50px;
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            font-family: var(--font-khmer-body);
+            cursor: pointer;
+            box-shadow: var(--shadow-gold);
+            display: none;
+            z-index: 1000;
+            transition: var(--transition-fast);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 576px) {
+            .invitation-container {
+                padding: 25px 15px;
+            }
+
+            .parents-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .couple-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .title-moul {
+                font-size: 1.25rem;
+            }
+
+            .couple-name {
+                font-size: 1.2rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary, .btn-ai-read {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="invitation-container">
+        
+        <!-- Header Traditional Ornament Banner -->
         <div class="khmer-sticker-header">
-            <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Header Sign">
+            <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Header Banner" loading="lazy" onerror="this.style.display='none'">
         </div>
 
-        <h1 class="title-moul">សេចក្តីជូនដំណឹង និងកម្មវិធីការ<br>ពិធីសំពះផ្ទឹមសែន និងសូត្រមន្តអាពាហ៍ពិពាហ៍</h1>
+        <!-- Main Title Header -->
+        <header class="header">
+            <div class="logo">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+            <div class="logo-english">Wedding Celebration</div>
+            <h1 class="title-moul">សេចក្តីជូនដំណឹង និងកម្មវិធីការ<br>ពិធីសំពះផ្ទឹមសែន និងសូត្រមន្តអាពាហ៍ពិពាហ៍</h1>
+            <div class="title-english">Invitation &amp; Event Schedule for Nuptial Blessing &amp; Chanting Ceremony</div>
+        </header>
 
-        <h3 class="parents-section-title">យើងខ្ញុំជាមាតាបិតា</h3>
-        <div class="parents-grid">
-            <div>
-                <span class="side-title">មាតាបិតាខាងប្រុស</span>
-                លោកគ្រូ <span class="parent-names">ហួ កាំង</span><br>
-                អ្នកគ្រូ <span class="parent-names">ហង្ស ស៊ីថា</span><br>
-                ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់
+        <!-- Parents Section Grid -->
+        <section aria-label="Parents Information">
+            <h2 class="parents-section-title">
+                យើងខ្ញុំជាមាតាបិតា
+                <span class="parents-title-en">/ Together with our Parents</span>
+            </h2>
+            <div class="parents-grid">
+                <!-- Groom's Parents -->
+                <div class="parent-side">
+                    <span class="side-title">មាតាបិតាខាងប្រុស</span>
+                    <span class="side-title-en">Groom's Parents</span>
+                    <div class="parent-names">
+                        លោកគ្រូ <span class="highlight-name">ហួ កាំង</span><br>
+                        អ្នកគ្រូ <span class="highlight-name">ហង្ស ស៊ីថា</span><br>
+                        <small class="text-muted">(Mr. Hou Kaing &amp; Mrs. Hang Sitha)</small><br>
+                        ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់<br>
+                        <small class="text-muted">and family</small>
+                    </div>
+                </div>
+
+                <!-- Bride's Parents -->
+                <div class="parent-side">
+                    <span class="side-title">មាតាបិតាខាងស្រី</span>
+                    <span class="side-title-en">Bride's Parents</span>
+                    <div class="parent-names">
+                        លោក <span class="highlight-name">ហ៊ុន ខេន</span><br>
+                        លោកស្រី <span class="highlight-name">N/A</span><br>
+                        <small class="text-muted">(Mr. Hun Khen &amp; Mrs. N/A)</small><br>
+                        ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់<br>
+                        <small class="text-muted">and family</small>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="side-title">មាតាបិតាខាងស្រី</span>
-                លោក <span class="parent-names">ហ៊ុន ខេន</span><br>
-                លោកស្រី <span class="parent-names">N/A</span><br>
-                ព្រមទាំងបងប្អូន និងកូនចៅទាំងអស់
-            </div>
-        </div>
+        </section>
 
-        <p class="ceremony-text">
-            មានកិត្តិយសសូមគោរពអញ្ជើញ <span class="honorific-highlight">ឯកឧត្តម លោកជំទាវ លោកអ្នកស្រី ញាតិមិត្តជិតឆ្ងាយទាំងអស់</span> ចូលរួមជាអធិបតីភាព និងជាសក្ខីកម្ម ស្ដាប់ព្រះសង្ឃសូត្រមន្តចម្រើនព្រះបរិត្ត និងចូលរួមក្នុងកិច្ច «សំពះផ្ទឹមសែន» ចងដៃប្រសិទ្ធពរជ័យសិរីសួស្តី ក្នុងពិធីមង្គលការកូនប្រុស កូនស្រីរបស់យើងខ្ញុំ៖
-        </p>
-
-        <div class="couple-container">
-            <div class="couple-label">— កូនកំលោះ —</div>
-            <span class="couple-name">ហួកាំង ថារ៉ា</span>
-            <div class="and-connector"> និង </div>
-            <div class="couple-label">— កូនក្រមុំ —</div>
-            <span class="couple-name">ខេន លីដា</span>
-        </div>
-
-        <div class="datetime-section">
-            <div class="datetime-title">កាលបរិច្ឆេទកម្មវិធី</div>
-            <p class="datetime-date">
-                ថ្ងៃ..... ទី..... ខែ..... ឆ្នាំ២០២៦<br>
-                <span class="lunar-date">(ត្រូវនឹងថ្ងៃ ... កើត ខែមាឃ ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០)</span>
+        <!-- Ceremony Invitation Text (Bilingual) -->
+        <div class="ceremony-text-wrapper">
+            <p class="ceremony-text">
+                មានកិត្តិយសសូមគោរពអញ្ជើញ <span class="honorific-highlight">ឯកឧត្តម លោកជំទាវ លោកអ្នកស្រី ញាតិមិត្តជិតឆ្ងាយទាំងអស់</span> ចូលរួមជាអធិបតីភាព និងជាសក្ខីកម្ម ស្ដាប់ព្រះសង្ឃសូត្រមន្តចម្រើនព្រះបរិត្ត និងចូលរួមក្នុងកិច្ច «សំពះផ្ទឹមសែន» ចងដៃប្រសិទ្ធពរជ័យសិរីសួស្តី ក្នុងពិធីមង្គលការកូនប្រុស កូនស្រីរបស់យើងខ្ញុំ៖
+            </p>
+            <div class="text-divider" aria-hidden="true"></div>
+            <p class="ceremony-text-en">
+                We have the immense honor to cordially invite all distinguished guests, relatives, and friends to join us as our guests of honor and witnesses to listen to the monks' chanting blessings and participate in the traditional Nuptial "Samphea Phtim" (Hand-Tying) ritual to bestow happiness and prosperity upon our children:
             </p>
         </div>
-        
+
+        <!-- Couple Banner -->
+        <div class="couple-container">
+            <div class="couple-side">
+                <span class="couple-label">— កូនកំលោះ —</span>
+                <span class="couple-label-en">Groom</span>
+                <span class="couple-name">ហួកាំង ថារ៉ា</span>
+                <span class="couple-name-en">Huokaing Thara</span>
+            </div>
+
+            <div class="and-connector" aria-hidden="true">&amp;</div>
+
+            <div class="couple-side">
+                <span class="couple-label">— កូនក្រមុំ —</span>
+                <span class="couple-label-en">Bride</span>
+                <span class="couple-name">ខេន លីដា</span>
+                <span class="couple-name-en">Khen Lyda</span>
+            </div>
+        </div>
+
+        <!-- Date & Time Info -->
+        <div class="datetime-section">
+            <div class="datetime-title">
+                កាលបរិច្ឆេទកម្មវិធី
+                <span class="datetime-title-en">/ Ceremony Date &amp; Time</span>
+            </div>
+            <div class="datetime-date">
+                <strong>ថ្ងៃ..... ទី..... ខែ..... ឆ្នាំ២០២៦</strong>
+            </div>
+            <div class="lunar-date">(ត្រូវនឹងថ្ងៃ ... កើត ខែមាឃ ឆ្នាំមមី អដ្ឋស័ក ព.ស. ២៥៧០)</div>
+            <div class="datetime-date-en">Date: [Day], [Month] [Date], 2026</div>
+        </div>
+
+        <!-- Interactive Detailed Timeline / Program Section -->
         <div class="program-wrapper">
-            <button class="btn-program-toggle" onclick="toggleProgram()">
-                📋 សូមចុចទីនេះដើម្បីមើលកម្មវិធីផ្ទឹម និងសូត្រមន្តលម្អិត
+            <button type="button" class="btn-program-toggle" id="programToggleBtn" onclick="toggleProgram()" aria-expanded="false" aria-controls="weddingTimeline">
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                <span>សូមចុចទីនេះដើម្បីមើលកម្មវិធីផ្ទឹម និងសូត្រមន្តលម្អិត<br><small style="font-family: var(--font-en-sans); font-weight: normal;">(Click here to view detailed ceremony schedule)</small></span>
+                <i class="fa-solid fa-chevron-down" id="toggleIcon" aria-hidden="true"></i>
             </button>
 
-            <div id="weddingTimeline" class="timeline-container collapsed">
-                <h4 class="timeline-main-title">
-                    ⏱️ កម្មវិធីពិធីការតាមពេលវេលាកំណត់ (Nuptial Ceremony Timeline)
-                </h4>
+            <div id="weddingTimeline" class="timeline-container collapsed" aria-hidden="true">
+                <h3 class="timeline-main-title">
+                    ⏱️ កម្មវិធីពិធីការតាមពេលវេលាកំណត់
+                    <span class="timeline-main-title-en">(Nuptial Ceremony Timeline Schedule)</span>
+                </h3>
 
                 <div class="timeline-item">
-                    <div class="time-badge">០៧:០០ ព្រឹក</div>
+                    <div class="time-badge">០៧:០០ ព្រឹក | 07:00 AM</div>
                     <div class="timeline-content">
                         <strong>ពិធីជួបជុំ និងកាត់ខ្សែបូ៖</strong> ទទួលស្វាគមន៍ភ្ញៀវកិត្តិយស និងកាត់ខ្សែបូជ័យបើកទ្វារមង្គល។
-                    </div>
-                </div>
-
-                <div class="timeline-item highlight-banquet">
-                    <div class="time-badge">០៨:០០ ព្រឹក</div>
-                    <div class="timeline-content">
-                        <strong>ពិធីសូត្រមន្តអាពាហ៍ពិពាហ៍៖</strong> នមស្ការព្រះរតនត្រ័យ ព្រះសង្ឃសូត្រមន្តចម្រើនព្រះបរិត្ត និងប្រោះព្រំទឹកមន្តសិរីសួស្តី។
-                    </div>
-                </div>
-
-                <div class="timeline-item highlight-banquet">
-                    <div class="time-badge">០៩:៣០ ព្រឹក</div>
-                    <div class="timeline-content">
-                        <strong>ពិធីសំពះផ្ទឹមសែន៖</strong> កូនប្រុសកូនស្រីឡើងកាន់រោងផ្ទឹម គោរពតាមលំដាប់លំដោយប្រពៃណី សែនព្រេនដល់ដូនតា និងចាស់ទុំ។
+                        <em>Guest Arrival &amp; Ribbon Cutting Ceremony: Welcoming honor guests and grand opening of the wedding hall.</em>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="time-badge">១០:៣០ ព្រឹក</div>
+                    <div class="time-badge">០៨:០០ ព្រឹក | 08:00 AM</div>
+                    <div class="timeline-content">
+                        <strong>ពិធីសូត្រមន្តអាពាហ៍ពិពាហ៍៖</strong> នមស្ការព្រះរតនត្រ័យ ព្រះសង្ឃសូត្រមន្តចម្រើនព្រះបរិត្ត និងប្រោះព្រំទឹកមន្តសិរីសួស្តី។
+                        <em>Buddhist Chanting Ceremony: Homage to the Triple Gem, monks chanting protective blessings, and holy water sprinkling ritual.</em>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">០៩:៣០ ព្រឹក | 09:30 AM</div>
+                    <div class="timeline-content">
+                        <strong>ពិធីសំពះផ្ទឹមសែន៖</strong> កូនប្រុសកូនស្រីឡើងកាន់រោងផ្ទឹម គោរពតាមលំដាប់លំដោយប្រពៃណី សែនព្រេនដល់ដូនតា និងចាស់ទុំ។
+                        <em>Nuptial "Samphea Phtim" Ceremony: Couple takes the altar stand, paying traditional respects to ancestors, elders, and parents.</em>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-badge">១០:៣០ ព្រឹក | 10:30 AM</div>
                     <div class="timeline-content">
                         <strong>ពិធីចងដៃ និងបាចផ្កាស្លា៖</strong> មាតាបិតា ជីដូនជីតា និងភ្ញៀវកិត្តិយសអញ្ជើញចងដៃឱ្យពរជ័យ និងបាចផ្កាស្លាជ័យអបអរសាទរ។
+                        <em>Red Thread Wrist-Tying &amp; Palm Flower Shower: Parents, elders, and distinguished guests tie blessing threads and shower palm flowers upon the newlyweds.</em>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- Venue Location Details -->
         <div class="location-section">
-            <span class="location-title">កម្មវិធីរៀបចំឡើងនៅ៖</span>
+            <span class="location-title">កម្មវិធីរៀបចំឡើងនៅ / Venue Location:</span>
             <span class="location-name">ភោជនីយដ្ឋាន ផ្កាយ ៥ ហួ កាំង</span>
+            <span class="location-name-en">5-Star Hou Kaing Restaurant</span>
             <span class="location-sub">(សាខាមុខកំពូល ខេត្តកណ្តាល ព្រះរាជាណាចក្រកម្ពុជា)</span>
+            <span class="location-sub" style="font-family: var(--font-en-sans);">(Muk Kampoul Branch, Kandal Province, Kingdom of Cambodia)</span>
         </div>
 
-        <div class="blessing">
-            វត្តមានដ៏ខ្ពង់ខ្ពស់របស់លោកអ្នក គឺជាសិរីសួស្តី និងកិត្តិយសដ៏ធំធេងសម្រាប់គ្រួសារយើងខ្ញុំ!<br>
-            សូមអរគុណ និងសូមគោរពអញ្ជើញដោយក្តីរាប់អាន!
+        <!-- Blessing Statement -->
+        <div class="blessing-section">
+            <p class="blessing">
+                "វត្តមានដ៏ខ្ពង់ខ្ពស់របស់លោកអ្នក គឺជាសិរីសួស្តី និងកិត្តិយសដ៏ធំធេងសម្រាប់គ្រួសារយើងខ្ញុំ! សូមអរគុណ និងសូមគោរពអញ្ជើញដោយក្តីរាប់អាន!"
+            </p>
+            <p class="blessing-en">
+                "Your presence is our highest honor and greatest blessing for our family. Thank you and we warmly look forward to receiving you!"
+            </p>
         </div>
 
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> មើលទីតាំងលើផែនទី (Map)
+            </a>
+            <button type="button" class="btn-secondary" onclick="openRsvpModal()">
+                <i class="fa-solid fa-check-circle" aria-hidden="true"></i> បញ្ជាក់ការចូលរួម (RSVP)
+            </button>
+            <button type="button" class="btn-ai-read" id="aiReadBtn" onclick="toggleAudio()">
+                <i class="fa-solid fa-volume-high" aria-hidden="true"></i> អានសេចក្តីជូនដំណឹង (Audio)
+            </button>
+        </div>
+
+        <!-- Graphic Footer Sticker -->
         <div class="khmer-sticker-footer">
-            <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Footer Sign">
+            <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Footer Banner" loading="lazy" onerror="this.style.display='none'">
         </div>
-    </div> <footer>
-        <p>
-            ដោយក្តីគោរព និងរាប់អានពី<br>
-            ហួកាំង ថារ៉ា និង ខេន លីដា
-        </p>
-        <p>
-            © ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍
-        </p>
-    </footer>
-    
-    <button id="scrollTopBtn" onclick="scrollToTop()">⬆️ ត្រឡប់ទៅកំពូល</button>
 
-    <script src="script.js"></script>
-    <script src="script1.js"></script>
+        <!-- Footer Credits -->
+        <footer>
+            <p>
+                ដោយក្តីគោរព និងរាប់អានពី / With Best Compliments From<br>
+                <strong>ហួកាំង ថារ៉ា</strong> និង <strong>ខេន លីដា</strong><br>
+                <small>(Huokaing Thara &amp; Khen Lida)</small>
+            </p>
+            <p style="margin-top: 8px;">
+                &copy; ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍ | 2026 Wedding Nuptial Ceremony
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- RSVP Modal Dialog -->
+    <div class="modal-overlay" id="rsvpModal">
+        <div class="modal-card">
+            <h3>សូមអរគុណសម្រាប់ការបញ្ជាក់!</h3>
+            <p>Thank you very much for confirming your attendance! We look forward to seeing you at the ceremony.</p>
+            <button type="button" class="modal-close-btn" onclick="closeRsvpModal()">បិទ / Close</button>
+        </div>
+    </div>
+
+    <!-- Floating Scroll To Top Button -->
+    <button type="button" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> ឡើងលើ (Top)
+    </button>
+
+    <script>
+        // Program Timeline Collapsible Toggle
+        function toggleProgram() {
+            const timeline = document.getElementById('weddingTimeline');
+            const icon = document.getElementById('toggleIcon');
+            const btn = document.getElementById('programToggleBtn');
+            
+            const isCollapsed = timeline.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                timeline.classList.remove('collapsed');
+                timeline.classList.add('expanded');
+                timeline.setAttribute('aria-hidden', 'false');
+                btn.setAttribute('aria-expanded', 'true');
+                icon.className = 'fa-solid fa-chevron-up';
+            } else {
+                timeline.classList.remove('expanded');
+                timeline.classList.add('collapsed');
+                timeline.setAttribute('aria-hidden', 'true');
+                btn.setAttribute('aria-expanded', 'false');
+                icon.className = 'fa-solid fa-chevron-down';
+            }
+        }
+
+        // RSVP Modal Functions
+        function openRsvpModal() {
+            document.getElementById('rsvpModal').classList.add('active');
+        }
+
+        function closeRsvpModal() {
+            document.getElementById('rsvpModal').classList.remove('active');
+        }
+
+        // Audio Announcement Toggle Simulation
+        function toggleAudio() {
+            const btn = document.getElementById('aiReadBtn');
+            btn.classList.toggle('playing');
+            if (btn.classList.contains('playing')) {
+                btn.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i> កំពុងអាន... (Playing...)';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-volume-high" aria-hidden="true"></i> អានសេចក្តីជូនដំណឹង (Audio)';
+            }
+        }
+
+        // Scroll to Top Behavior
+        window.onscroll = function() {
+            const scrollBtn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
 </body>
 </html>
